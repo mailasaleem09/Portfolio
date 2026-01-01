@@ -1,9 +1,14 @@
 pipeline {
     agent any
 
+    // IMPORTANT: prevents automatic SCM checkout (stops double checkout)
+    options {
+        skipDefaultCheckout(true)
+    }
+
     environment {
         REPO_URL        = 'https://github.com/mailasaleem09/Portfolio.git'
-        SONARQUBE_ENV   = 'SonarQube-server'
+        SONARQUBE_ENV   = 'SonarQube-server'       // MUST match Jenkins SonarQube name
         DOCKER_SERVER  = 'ubuntu@ip-172-31-18-221'
     }
 
@@ -20,7 +25,7 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 script {
-                    def scannerHome = tool 'SonarQube Scanner'
+                    def scannerHome = tool 'SonarQube-scanner' // MUST match Jenkins tool name
                     withSonarQubeEnv("${SONARQUBE_ENV}") {
                         sh """
                         ${scannerHome}/bin/sonar-scanner \
@@ -32,8 +37,6 @@ pipeline {
                 }
             }
         }
-
-        // Quality Gate stage REMOVED (no waitForQualityGate)
 
         stage('Docker Build & Deploy') {
             steps {
