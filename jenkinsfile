@@ -1,9 +1,9 @@
 pipeline {
 agent any
 environment {
-REPO_URL = 'https://github.com/zaidqureshi3111995/portfolio-cloud'
+REPO_URL = 'https://github.com/mailasaleem09/Portfolio.git'
 SONARQUBE_ENV = 'SonarQube-server'
-DOCKER_SERVER = 'ubuntu@172.31.26.188'
+DOCKER_SERVER = 'ubuntu@ip-172-31-18-221'
 }
 stages {
 stage('Checkout Code') {
