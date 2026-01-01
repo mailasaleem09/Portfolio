@@ -3,216 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
+    <title>Maila Saleem | DevOps Engineer Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Reset some default styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            background-color: #f7f7f7;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background: #333;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 1.1rem;
-        }
-
-        .container {
-            width: 80%;
-            margin: auto;
-        }
-
-        section {
-            margin: 40px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        .about, .skills, .projects, .contact {
-            padding: 40px 0;
-        }
-
-        .about p {
-            font-size: 1.2rem;
-            color: #555;
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .skills ul {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .skills li {
-            background: #333;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-
-        .projects {
-            background: #f0f0f0;
-        }
-
-        .projects .project {
-            background: white;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .projects .project h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-
-        .projects .project p {
-            font-size: 1rem;
-            color: #555;
-        }
-
-        .contact form {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .contact input, .contact textarea {
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-
-        .contact button {
-            padding: 10px 20px;
-            background-color: #333;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            cursor: pointer;
-        }
-
-        .contact button:hover {
-            background-color: #555;
-        }
-
-        footer {
-            background: #333;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        footer a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 768px) {
-            .skills ul {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8f9fa; }
+        .hero-section { background: linear-gradient(135deg, #0d6efd, #001f3f); color: white; padding: 100px 0; }
+        .card { border: none; transition: 0.3s; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .card:hover { transform: translateY(-10px); }
+        footer { background: #212529; color: white; padding: 20px 0; }
     </style>
 </head>
 <body>
 
-    <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
-            <h1>Your Name</h1>
-            <p>Web Developer | Designer | Creator</p>
+            <a class="navbar-brand" href="#">Maila Saleem</a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="#projects">Projects</a>
+                <a class="nav-link" href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-3 fw-bold">Cloud & DevOps Engineer</h1>
+            <p class="lead">Automating Infrastructure | CI/CD Pipelines | Cloud Solutions</p>
+            <a href="#projects" class="btn btn-outline-light btn-lg mt-3">View My Work</a>
         </div>
     </header>
 
-    <div class="container">
-        <!-- About Me Section -->
-        <section class="about">
-            <h2 class="section-title">About Me</h2>
-            <p>I am a passionate web developer with experience in creating beautiful and responsive websites. I love solving complex problems and learning new technologies to improve my skills.</p>
-        </section>
-
-        <!-- Skills Section -->
-        <section class="skills">
-            <h2 class="section-title">Skills</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>Node.js</li>
-                <li>Git</li>
-            </ul>
-        </section>
-
-        <!-- Projects Section -->
-        <section class="projects">
-            <h2 class="section-title">My Projects</h2>
-            <div class="project">
-                <h3>Portfolio Website</h3>
-                <p>This is my personal portfolio website built with HTML, CSS, and JavaScript. It showcases my work and skills.</p>
+    <section id="about" class="container my-5 py-5">
+        <div class="row text-center">
+            <h2 class="mb-5">Technical Skills</h2>
+            <div class="col-md-3">
+                <div class="p-3 border bg-white rounded"><strong>CI/CD:</strong> Jenkins, GitHub Actions</div>
             </div>
-            <div class="project">
-                <h3>Todo List App</h3>
-                <p>A simple todo list web app where users can add and manage tasks. Built with JavaScript and local storage.</p>
+            <div class="col-md-3">
+                <div class="p-3 border bg-white rounded"><strong>Containers:</strong> Docker, Kubernetes</div>
             </div>
-        </section>
+            <div class="col-md-3">
+                <div class="p-3 border bg-white rounded"><strong>Cloud:</strong> AWS, Azure</div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-3 border bg-white rounded"><strong>Monitoring:</strong> SonarQube, Prometheus</div>
+            </div>
+        </div>
+    </section>
 
-        <!-- Contact Section -->
-        <section class="contact">
-            <h2 class="section-title">Contact Me</h2>
-            <form action="#">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-    </div>
+    <section id="projects" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Featured Projects</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Automated Portfolio CI/CD</h5>
+                            <p class="card-text">Jenkins pipeline with SonarQube analysis and Docker deployment on AWS EC2.</p>
+                            <span class="badge bg-primary">Jenkins</span> <span class="badge bg-secondary">Docker</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </section>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2026 Maila Saleem. All rights reserved.</p>
-        <p>Find me on <a href="#">GitHub</a> | <a href="#">LinkedIn</a></p>
+    <section id="contact" class="container my-5 py-5 text-center">
+        <h2>Get In Touch</h2>
+        <p>Email: mailasaleem@example.com</p>
+        <div class="mt-4">
+            <a href="https://github.com/mailasaleem09" class="btn btn-dark">GitHub</a>
+            <a href="#" class="btn btn-primary">LinkedIn</a>
+        </div>
+    </section>
+
+    <footer class="text-center">
+        <p>&copy; 2026 Maila Saleem. Built with Jenkins & Docker.</p>
     </footer>
 
 </body>
